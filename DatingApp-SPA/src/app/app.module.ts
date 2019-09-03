@@ -1,3 +1,5 @@
+import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
+import { MessagesResolver } from './_resolvers/messages.resolver';
 import { FileUploadModule } from 'ng2-file-upload';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
@@ -54,6 +56,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
+      MemberMessagesComponent,
       PhotoEditorComponent,
       TimeAgoPipe
    ],
@@ -88,6 +91,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
       MemberEditResolver,
       PreventUnsavedChanges,
       ListsResolver,
+      MessagesResolver,
       { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig }
    ],
    bootstrap: [
